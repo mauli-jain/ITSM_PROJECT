@@ -1,0 +1,6 @@
+{
+  "name": "Intelligent IT Service Management (I-ITSM)",
+  "description": "Enterprise-grade IT Service Management and Incident Resolution System featuring state patterns, intelligent routing, SLA tracking, and role-based workflows.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
