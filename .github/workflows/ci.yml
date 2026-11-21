@@ -1,0 +1,36 @@
+name: I-ITSM Continuous Integration
+
+on:
+  push:
+    branches: [ '**' ]
+  pull_request:
+    branches: [ '**' ]
+
+jobs:
+  lint-test-build:
+    name: Lint, Test & Build Verification
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js LTS
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: 'npm'
+
+      - name: Clean Install Dependencies
+        run: npm ci
+
+      - name: Run TypeScript Typecheck (tsc --noEmit)
+        run: npm run lint
+
+      - name: Run Automated Test Suite (Vitest)
+        run: npm test
+        env:
+          JWT_SECRET: super-secret-jwt-key-minimum-32-chars-long-iitsm-ci-runner
+
+      - name: Run Production Client Build (Vite)
+        run: npm run build
