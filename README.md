@@ -145,7 +145,6 @@ The platform integrates Gemini AI via `src/services/GeminiService.ts`:
 ├── .github/
 │   └── workflows/
 │       └── ci.yml             # GitHub Actions CI workflow (lint, test, build)
-├── data/                      # Persistent SQLite database files (data/iitsm.db)
 ├── docs/                      # Technical reports, UML diagrams, tests catalog
 │   ├── architecture.md
 │   ├── class-diagram.md
@@ -171,13 +170,22 @@ The platform integrates Gemini AI via `src/services/GeminiService.ts`:
 │   ├── types/                 # Domain & UI TypeScript interfaces
 │   ├── utils/                 # Intelligent algorithms (Jaccard similarity, scoring)
 │   └── server.ts              # Express API & Vite middleware entrypoint
+│   └── main.tsx              
+│   └── index.css             
+│   └── App.tsx              
 ├── test/
 │   ├── itsm.test.ts           # 21 Domain OOP unit tests
 │   └── api.test.ts            # 30 API integration & security tests
+├── .env.example
+├── .gitignore
 ├── Dockerfile                 # Multi-stage production container definition
 ├── docker-compose.yml         # Container orchestration with volume & env
+├── index.html
+├── metadata.json
+├── package-lock.json
 ├── .dockerignore
 ├── package.json
 ├── tsconfig.json
+├── vitest.config.ts
 └── vite.config.ts
 ```
