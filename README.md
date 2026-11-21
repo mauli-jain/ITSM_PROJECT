@@ -40,6 +40,7 @@ All accounts are pre-seeded with securely hashed credentials.
 | Shambhavi Chaturvedi | `shambhavi` | `password` | Technician (`ROLE_TECHNICIAN`) |
 | Tulika Devale | `tulika` | `password` | Technician (`ROLE_TECHNICIAN`) |
 | Simran Misra | `simran` | `password` | Technician (`ROLE_TECHNICIAN`) |
+| Avani Pandit | `avanip` | `password` | Employee (`ROLE_TECHNICIAN`) | (not presnt as demo account - created a sample one in user directory)
 
 ## Environment Variables
 
